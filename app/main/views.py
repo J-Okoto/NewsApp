@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template,request
 from . import main
 from ..models import Sources
 from ..request import get_sources
