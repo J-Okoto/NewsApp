@@ -1,3 +1,8 @@
+
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +14,63 @@
         {% endif %}
     </head>
     <body>
+        
+
+
+<!-- Content block -->
+{% block content %}
+    <div class="container-fluid">
+
+            <!-- general news -->
+            <h3> General news</h3>
+            <div class="row">
+                {{ macro.displayNews(General)}}
+            </div>
+                
+                <hr>
+            <!---Business news-->
+            <h3> Business news</h3>
+            <div class="row">
+                {{ macro.displayNews(Business)}}                
+            </div>
+
+            <!--Entertainment news-->
+            <h3> Entertainment news</h3>
+            <div class="row">
+                {{ macro.displayNews(Entertainment)}}
+            </div>
+<hr>
+            <!---sports news-->
+            <h3> Sports news</h3>
+            <div class="row">
+                {{ macro.displayNews(Sports)}}
+            </div>
+<hr>
+            <!---Technology news--->
+            <h3> Technology news</h3>
+            <div class="row">
+                {{ macro.displayNews(Technology)}}
+            </div>
+<hr>            
+            <!--Science news-->
+            <h3> Science news</h3>
+            <div class="row">
+                {{ macro.displayNews(Science)}}
+            </div>
+<hr>
+            <!---Health news--->
+            <h3> Health news</h3>
+            <div class="row">
+                {{ macro.displayNews(Health)}}
+            </div>
+
+    </div>
+{% endblock%}
+
+
+
+
+
 
     </body>
 </html>
