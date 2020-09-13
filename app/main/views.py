@@ -18,6 +18,6 @@ def index():
 
     title = 'Welcome to Newsbytes'
     
-    return render_template('index.html'title=title,General=general_news, Business=business_news,
+    return render_template('index.html', title=title, General=general_news, Business=business_news,
                            Entertainment=entertainment_news, Sports=sports_news, Technology=technology_news,
                            Science=science_news, Health=health_news)
