@@ -1,4 +1,4 @@
-# [NewsApp](https://.herokuapp.com/)
+# [NewsApp](https://git.heroku.com/newsapp254.git)
 
 ## By J-Okoto
 
@@ -49,7 +49,8 @@ You need the following to start working on the project on your local computer:
 ```
 * Run ```chmod +x start.sh``` follwoed by ``` ./start.sh ``` while in the project folder to start the project.
 * Once started, the project can be accessed on your localhost using the address: ``` localhost:5000 ```.
-* Alternatively the application can be accessed by visiting https://.herokuapp.com
+* Alternatively the application can be accessed by visiting 
+https://git.heroku.com/newsapp254.git
 
 ## Technologies Used
 
