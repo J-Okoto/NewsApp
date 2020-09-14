@@ -1,23 +1,23 @@
-from .models import Sources
-import urllib.request, json
 
+import urllib.request, json
+from .models import Sources
 
 
 api_key = None
-sources_url = None
-articles_url = None
+base_url = None
+
 
 def configure_request(app):
-    global api_key, base_url
-    api_key = app.config['NEWS_API_KEY']
-    base_url = app.config['SOURCES_BASE_URL']
+    global api_key,base_url
+    api_key =app.config['NEWS_API_KEY']
+    base_url =app.config['SOURCES_BASE_URL']
    
 
 def get_sources(category):
     '''
     Function that gets the json response to our url request
     '''
-    get_sources_url = base_url.format(category, api_key)
+    get_sources_url = base_url.format(category,api_key)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
@@ -55,3 +55,20 @@ def process_results(source_list):
         source_results.append(source_object)
 
     return source_results
+
+def get_articles(source_id, limit):
+    '''
+    Function that gets articles based on the source id
+    '''
+    get_article_location_url = articles_url.format(source_id, limit, api_key)
+
+    with urllib.request.urlopen(get_article_location_url) as url:
+        articles_location_data = url.read()
+        articles_location_response = json.loads(articles_location_data)
+
+        articles_location_results = None
+
+        if articles_location_response['articles']:
+            articles_location_results = process_articles(articles_location_response['articles'])
+
+    return articles_location_results
