@@ -5,6 +5,7 @@
 <!-- Content block -->
 {% block content %}
     <div class="container-fluid">
+        <h1 class='text-center'>Welcome to our NewsApp!</h1>
 
             <!-- general news -->
             <h3> General news</h3>
@@ -50,6 +51,7 @@
             </div>
 
     </div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> 
 {% endblock%}
 
 
