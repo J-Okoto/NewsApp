@@ -1,1 +1,6 @@
-h1{text-align: center;}
+h1{text-align: center;
+color: aqua;}
+.article-box {
+    background-color: #000;
+  }
+  .container{background-color: rgb(231, 138, 17);}
