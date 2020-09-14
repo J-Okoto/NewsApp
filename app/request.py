@@ -35,10 +35,7 @@ def get_sources(category):
 def process_results(source_list):
     '''
     Function that process the source results and transforms them to a list objects
-    Args:
-        source_list: A list of dictionaries that contains source details
-    Returns:
-        source_results: A list of source objects
+    
     '''
 
     source_results = []
